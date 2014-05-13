@@ -58,6 +58,33 @@ node default {
   include hub
   include nginx
 
+  # common apps
+  include automake
+  include charles
+  include chrome
+  include emacs
+  include flux
+  include firefox
+  include intellij
+  include iterm2::stable
+  include keepassx
+  include libtool
+  include notational_velocity::nvalt
+  include mou
+  include mysql
+  include pkgconfig
+  include pycharm
+  include sequel_pro
+  #include libreoffice
+  include skype
+include sublime_text_2
+sublime_text_2::package { 'Emmet':
+  source => 'sergeche/emmet-sublime'
+}
+  include vagrant
+  include virtualbox
+  include vlc
+
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
