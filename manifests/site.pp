@@ -73,7 +73,6 @@ node default {
   include mou
   include mysql
   include pkgconfig
-  include pycharm
   include sequel_pro
   #include libreoffice
   include skype
